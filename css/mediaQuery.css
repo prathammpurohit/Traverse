@@ -21,7 +21,7 @@
     height: 3.2rem;
 }
 body::after{
-    background: url("../images/iamgreen.gif") no-repeat top;
+    background: url("../images/hopeForTomorrow.gif") no-repeat top;
     background-size: cover;
 }
 #FooterPara{
