@@ -6,6 +6,7 @@
     text-decoration: none;
     cursor: default;
     box-sizing: border-box;
+    overflow:hidden;
     font-family: Poppins;
 }
 
