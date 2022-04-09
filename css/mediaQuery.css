@@ -1,0 +1,30 @@
+.btnAdjust{
+    font-size: 1.2rem;
+    color: white;
+    padding: 0.5rem;
+    width: 80vw;
+    letter-spacing: 1px;
+    background-color: rgba(170, 46, 170,0.5);
+}
+.btnAdjust:hover{
+    background-color: rgba(124, 44, 120,0.8);
+    cursor: pointer;
+}
+#TraVerse{
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+#LogoHead{
+    top: 14px;
+    height: 3.2rem;
+}
+body::after{
+    background: url("../images/iamgreen.gif") no-repeat top;
+    background-size: cover;
+}
+#FooterPara{
+    text-align: center;
+    color: rgba(226, 183, 197, 0.6);
+}
