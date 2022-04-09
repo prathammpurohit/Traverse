@@ -21,7 +21,7 @@
     height: 3.2rem;
 }
 body::after{
-    background: url("../images/glitch.gif") no-repeat center;
+    background: url("../images/iamgreen.gif") no-repeat center;
     background-size: cover;
 }
 #FooterPara{
