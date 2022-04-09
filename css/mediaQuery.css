@@ -4,7 +4,7 @@
     padding: 0.4rem;
     width: 80vw;
     letter-spacing: 1px;
-    background-color: rgba(170, 46, 170,0.5);
+    background-color:rgb(253, 247, 253,0.4);
 }
 .btnAdjust:hover{
     background-color: rgba(124, 44, 120,0.8);
