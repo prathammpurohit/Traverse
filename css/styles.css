@@ -57,7 +57,7 @@ main{
     width: 20rem;
     border-style: none;
     border-radius: 30px;
-    background-color: rgba(231, 151, 178, 0.8);
+    background-color: rgb(151 153 230 / 80%));
     font-size: 1.4rem;
     letter-spacing: 2px;
 }
