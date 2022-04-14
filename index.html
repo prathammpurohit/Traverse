@@ -14,6 +14,9 @@
 </head>
 
 <body>
+
+    <div id="Loader"></div>
+
     <header>
         <span id="ColorHead">
             <h1 id="TraVerse"><img src="images/logo.svg" alt="" id="LogoHead">rA <span id="verse">VErSE</span></h1>
@@ -27,11 +30,11 @@
             </button></a>
         <a href="https://www.linkedin.com/in/pratham-purohit-025298217/" target="_blank" class="ListLink"><button
                 class="btnAdjust">LinkedIn </button></a>
-        <a href="https://www.frontendmentor.io/profile/prathammpurohit" target="_blank" class="ListLink"><button
+        <a href="https://www.linkedin.com/in/pratham-purohit-025298217/" target="_blank" class="ListLink"><button
                 class="btnAdjust">FrontEnd-Mentor</button></a>
         <a href="https://hashnode.com/@prathampurohit" target="_blank" class="ListLink"><button
                 class="btnAdjust">HashNode </button></a>
-        <a href="mailto:prathampurohitonline@outlook.com" class="ListLink"><button class="btnAdjust">Drop Mail </button></a>
+        <a href="" class="ListLink"><button class="btnAdjust">Drop Mail </button></a>
 
     </main>
 
@@ -40,6 +43,12 @@
         </p>
     </footer>
 
+    <script>
+        let load=document.getElementById("Loader");
+        window.addEventListener("load",function(){
+            load.style.display="none";
+        })
+    </script>
 </body>
 
 </html>
