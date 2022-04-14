@@ -1,13 +1,12 @@
+
 .btnAdjust{
     font-size: 1.2rem;
-    color: white;
     padding: 0.5rem;
     width: 80vw;
     letter-spacing: 1px;
-    background-color: rgb(253, 247, 253,0.4);
 }
 .btnAdjust:hover{
-    background-color: rgba(124, 44, 120,0.8);
+    background-color: rgba(97, 49, 95, 0.8);
     cursor: pointer;
 }
 #TraVerse{
@@ -17,23 +16,14 @@
     padding-bottom: 2rem;
 }
 #LogoHead{
-    top: 14px;
-    height: 3.2rem;
+    top: 12px;
+    height: 3rem;
 }
 body::after{
-    background: url("../images/hopeForTomorrow.gif") no-repeat top;
+    background: url("../images/fridge.gif") no-repeat top;
     background-size: cover;
 }
 #FooterPara{
     text-align: center;
     color: rgba(226, 183, 197, 2);
-}
-
-#Loader{
-    background: rgb(25, 25, 29) url("../images/loader.gif") center no-repeat;
-    background-size: 20%;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    z-index: 5;
 }
