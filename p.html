@@ -16,9 +16,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1rem;
+            font-size: 2vw;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: rgb(85, 48, 22);
+            color: rgb(10, 8, 7);
         }
         body::after{
             content: "";
@@ -27,13 +27,28 @@
             width: 100%;
             top: 0;
             z-index: -1;
-            opacity: 0.5;
-            background: url("images/med.png") no-repeat  center;
+            opacity: 0.8;
+            background: url("images/children-of-uganda-2314806_1920.jpg") no-repeat  center;
             background-size: cover;
+        }
+        #Loader{
+            background: rgba(167, 167, 175,0.4) url("../images/new.gif") center no-repeat;
+            background-size: 30%;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 5;
         }
     </style>
 </head>
 <body>
+    <div id="Loader"></div>
     <h1>WORK IN PROGRESS</h1>
+    <script>
+        let load=document.getElementById("Loader");
+        window.addEventListener("load",function(){
+            load.style.display="none";
+        })
+    </script>
 </body>
 </html>
