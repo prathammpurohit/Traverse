@@ -31,7 +31,13 @@ body::after{
     background: url("../images/nft.jpeg") no-repeat center;
     background-size: cover;
     opacity: 0.6;
+    filter:grayscale(80%);
 }
+
+body:hover::after{
+    filter: unset;
+}
+
 #FooterPara{
     text-align: center;
     color: rgb(255 255 255)
