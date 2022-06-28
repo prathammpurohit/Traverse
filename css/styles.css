@@ -27,7 +27,7 @@ body::after{
 
 #LogoHead{
     height: 4.5rem;
-    opacity: 0.6;
+    opacity: 0.8;
     position: relative;
     top: 17px;
 }
@@ -36,11 +36,11 @@ body::after{
     font-size: 3rem;
     text-align: center;
     padding-top: 3.8rem;
-    color: rgb(75, 26, 94);
+    color: rgb(150 217 228);
 }
 #verse{
-    background-color: rgba(255, 255, 0,0.5);
-    color: rgb(158, 45, 158);
+    background-color: rgb(134 234 255 / 64%);
+    color: rgb(122 117 124);
 }
 
 main{
@@ -53,18 +53,20 @@ main{
 }
 
 .btnAdjust{
+    color: black;
     font-family: Open Sans;
     padding: 1.2rem;
     width: 20rem;
     border-style: none;
     border-radius: 30px;
-    background-color: rgba(143, 146, 158, 0.2);
+    background-color: rgba(143, 146, 158, 0.1);
     font-size: 1.4rem;
     letter-spacing: 2px;
+    margin-bottom: 2rem;
 }
 
 .btnAdjust:hover{
-    background-color: rebeccapurple;
+    background-color: rgb(112, 183, 188,0.5);
     cursor: pointer;
 }
 footer{
