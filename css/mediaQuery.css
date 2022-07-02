@@ -31,12 +31,12 @@ body::after{
     background: url("../images/goatNFT.jpeg") no-repeat center;
     background-size: cover;
     opacity: 0.8;
-    filter:grayscale(60%);
+    /*filter:grayscale(60%);*/
 }
 
-body:hover::after{
+/*body:hover::after{
     filter: unset;
-}
+}*/
 
 #FooterPara{
     text-align: center;
