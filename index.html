@@ -36,7 +36,9 @@
           left: 101px;
           width: 70vw;
         }
-
+        #intro {
+          font-size: 1rem;
+        }
         @keyframes move-animation {
           0% {
             top: -16px;
@@ -45,8 +47,30 @@
             top: -90px;
           }
         }
-        .move-back {
-          animation: move-animation-back 0.4s linear forwards;
+        @keyframes circle-animation {
+          0% {
+            clip-path: circle(95%);
+            opacity: 1;
+          }
+          25% {
+            clip-path: circle(45%);
+            background-color: #ff7f3f;
+            opacity: 1;
+          }
+          50% {
+            clip-path: circle(65%);
+            background-color: #89cffd;
+            opacity: 1;
+            opacity: 1;
+          }
+          85% {
+            clip-path: circle(95%);
+            background-color: #f94892;
+          }
+          100% {
+            clip-path: circle(100%);
+            opacity: 0;
+          }
         }
         @keyframes move-animation-back {
           0% {
@@ -89,6 +113,13 @@
     </style>
   </head>
   <body>
+    <div id="intro">
+      <h2 class="animate__animated animate__lightSpeedInRight">
+        <span class="tra">Tra</span
+        ><span class="v animate__animated animate__bounce">V</span
+        ><span class="tra">erse</span>
+      </h2>
+    </div>
     <main>
       <section class="profile-card animate__animated animate__jello">
         <div class="hidden-stats">
@@ -98,7 +129,6 @@
             onclick="tapDefault()"
           ></i>
           <!-- <i class="fa-solid fa-business-time"><strong>Portfolio</strong></i> -->
-          
         </div>
         <img src="images/crop.png" alt="" class="profile-picture" />
         <div class="profile">
@@ -127,6 +157,7 @@
       typeSpeed: 40,
       loop: true,
       loopCount: Infinity,
+      startDelay: 2800,
     };
 
     let typed = new Typed(".changing-profession", options);
