@@ -19,32 +19,71 @@
     <link rel="stylesheet" href="main.css" />
     <style>
       @media screen and (max-width: 500px) {
-        .profile-picture{
+        .profile-picture {
           height: 6rem;
         }
-        .profile{
+        .profile {
           height: 6rem;
           width: 70vw;
-          font-size:11px;
-          overflow:hidden;
+          font-size: 11px;
+          overflow: hidden;
         }
-        i{
+        i {
           font-size: 20px;
+        }
+        .hidden-stats {
+          height: 100px;
+          left: 101px;
+          width: 70vw;
+        }
+
+        @keyframes move-animation {
+          0% {
+            top: -16px;
+          }
+          100% {
+            top: -90px;
+          }
+        }
+        .move-back {
+          animation: move-animation-back 0.4s linear forwards;
+        }
+        @keyframes move-animation-back {
+          0% {
+            top: -90px;
+          }
+          100% {
+            top: -16px;
+            opacity: 0;
+          }
         }
       }
 
-      @media  screen and (max-width:295px) {
-        .profile-picture{
+      @media screen and (max-width: 295px) {
+        .profile-picture {
           height: 4rem;
         }
-        .profile{
+        .profile {
           height: 4rem;
           width: 70vw;
-          font-size:9px;
-          overflow:hidden;
+          font-size: 9px;
+          overflow: hidden;
         }
-        i{
+        i {
           font-size: 14px;
+        }
+        .hidden-stats {
+          height: 80px;
+          left: 68.5px;
+          width: 70vw;
+        }
+        @keyframes move-animation {
+          0% {
+            top: -10px;
+          }
+          100% {
+            top: -66px;
+          }
         }
       }
     </style>
@@ -52,12 +91,21 @@
   <body>
     <main>
       <section class="profile-card animate__animated animate__jello">
+        <div class="hidden-stats">
+          <i
+            class="fa-solid fa-eye-slash cross"
+            style="color: #747888; font-size: 1rem"
+            onclick="tapDefault()"
+          ></i>
+          <!-- <i class="fa-solid fa-business-time"><strong>Portfolio</strong></i> -->
+          
+        </div>
         <img src="images/crop.png" alt="" class="profile-picture" />
         <div class="profile">
           <div class="part1 animate__animated animate__jackInTheBox">
-            <a href="pages/information.html"><i class="i1 fa-solid fa-circle-info"></i></a>
-            <a href="pages/information.html"><i class="i2 fa-solid fa-handshake-simple"></i></a>
-            <a href="pages/information.html"><i class="i3 fa-solid fa-paperclip"></i></a>
+            <i class="i1 fa-solid fa-circle-info" onclick="tapInfo()"></i>
+            <i class="i2 fa-solid fa-handshake-simple" onclick="tapShake()"></i>
+            <i class="i3 fa-solid fa-paperclip" onclick="tapLink()"></i>
           </div>
           <div class="part2 animate__animated animate__bounce">
             <h1 class="username"><cite>Pratham Purohit</cite></h1>
@@ -68,6 +116,7 @@
     </main>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="app.js"></script>
   <script>
     let options = {
       strings: [
