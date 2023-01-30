@@ -22,6 +22,7 @@
 body{
   background-color: var(--yellow-background);
   position: relative;
+  overflow: hidden;
 }
 /* Adjusting main */
 main{
@@ -41,6 +42,8 @@ main{
   z-index: 1;
   font-family: var(--heading-font);
   animation-delay: 2.8s;
+  position: relative;
+  top: -4rem;
 }
 .profile-picture{
   height: 10rem;
@@ -126,7 +129,6 @@ i:hover{
   border-radius: 30px 30px 0 0;
   display: none;
   z-index: -3;
-  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -165,7 +167,7 @@ i:hover{
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100dvh;
   width: 100%;
   background-color: #FBDF07;
   z-index: 2;
@@ -183,7 +185,7 @@ i:hover{
   50% { clip-path: circle(50%);background-color: #89CFFD; opacity: 1;opacity: 1;z-index: 2;}
   85% { clip-path: circle(75%);background-color: #F94892;z-index: 2; }
   95%{z-index: 2;}
-  100% { clip-path: circle(100%);opacity: 0;z-index: -1; }
+  100% { clip-path: circle(100%);opacity: 0;z-index: -10; }
 }
 /* Animating logo */
 span{
@@ -192,3 +194,27 @@ span{
 .v{
   animation-delay: 1.5s;
 }
+
+/* setting hidden stats bottom */
+.hidden-stats-bottom{
+  height: 18rem;
+  border-radius: 0 0 20px 20px;
+  background-color: red;
+}
+
+/* animating hidden stat */
+.move-bottom{
+  animation: move-animation-bottom 0.3s linear forwards;
+}
+@keyframes move-animation-bottom {
+  0%{top: 0;}
+  100%{top:10rem;}
+}
+.move-bottom-back{
+  animation: move-bottom-animation-back 0.3s linear forwards;
+}
+@keyframes move-bottom-animation-back {
+  0%{top: 10rem;}
+  100%{top:0;opacity: 0;}
+}
+/* iframe style */
