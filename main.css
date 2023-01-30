@@ -8,6 +8,9 @@
   --pink-background:#FFCBCB;
   --heading-font:'Alegreya Sans', sans-serif;
   --text-font:'Nunito', sans-serif;
+  --font-color1:#B2A4FF;
+  --font-color2:#F07DEA;
+  --font-color3:#F37878;
 }
 *{
   margin: 0;
@@ -47,26 +50,30 @@ main{
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 1.3rem;
+  z-index: 3;
 }
 /* setting icons*/
 .part1{
   text-align: end;
+  position: relative;
+  z-index: 2;
 }
 i{
   position: relative;
   font-size: 25px;
   margin-right: 0.7rem;
-  color: #B2A4FF;
+  color: var(--font-color1);
   font-family: var(--text-font);
+  top: 1px;
 }
 i:hover{
   cursor: pointer;
 }
 .i2{
-  color: #F07DEA;
+  color:var(--font-color2) ;
 }
 .i3{
-  color: #F37878;
+  color: var(--font-color3);
 }
 /* drawing lines top */
 
@@ -100,4 +107,48 @@ i:hover{
   width: 100%;
   height: 2.23rem;
   background-color: var(--pink-background);
+}
+/* Setting hidden div */
+.hidden-stats{
+  position: absolute;
+  height: 128px;
+  width: 20rem;
+  top: 0;
+  left: 171px;
+  border-radius: 30px 30px 0 0;
+  display: none;
+  z-index: -3;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cross{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+/* Animating hidden div */
+.move{
+  animation: move-animation 0.3s linear forwards;
+}
+@keyframes move-animation {
+  0%{top: -32px;}
+  100%{top:-128px;}
+}
+
+.move-back{
+  animation: move-animation-back 0.3s linear forwards;
+}
+@keyframes move-animation-back {
+  0%{top: -128px;}
+  100%{top:-32px;opacity: 0;}
+}
+
+/* color change */
+.color-change-back{
+  animation: color-animation-back 0.6s ease-in-out forwards;
+}
+@keyframes color-animation-back {
+  100%{background-color: var(--blue-background);}
 }
