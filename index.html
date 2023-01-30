@@ -18,7 +18,7 @@
     <title>Traverse</title>
     <link rel="stylesheet" href="main.css" />
     <style>
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 600px) {
         .profile-picture {
           height: 6rem;
         }
@@ -49,27 +49,35 @@
         }
         @keyframes circle-animation {
           0% {
-            clip-path: circle(95%);
+            clip-path: circle(85%);
             opacity: 1;
+            z-index: 2;
           }
           25% {
             clip-path: circle(45%);
             background-color: #ff7f3f;
             opacity: 1;
+            z-index: 2;
           }
           50% {
             clip-path: circle(65%);
             background-color: #89cffd;
             opacity: 1;
             opacity: 1;
+            z-index: 2;
           }
           85% {
-            clip-path: circle(95%);
+            clip-path: circle(85%);
             background-color: #f94892;
+            z-index: 2;
+          }
+          95% {
+            z-index: 2;
           }
           100% {
             clip-path: circle(100%);
             opacity: 0;
+            z-index: -10;
           }
         }
         @keyframes move-animation-back {
@@ -113,13 +121,6 @@
     </style>
   </head>
   <body>
-    <div id="intro">
-      <h2 class="animate__animated animate__lightSpeedInRight">
-        <span class="tra">Tra</span
-        ><span class="v animate__animated animate__bounce">V</span
-        ><span class="tra">erse</span>
-      </h2>
-    </div>
     <main>
       <section class="profile-card animate__animated animate__jello">
         <div class="hidden-stats">
@@ -144,6 +145,13 @@
         </div>
       </section>
     </main>
+    <div id="intro">
+      <h2 class="animate__animated animate__lightSpeedInRight">
+        <span class="tra">Tra</span
+        ><span class="v animate__animated animate__bounce">V</span
+        ><span class="tra">erse</span>
+      </h2>
+    </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="app.js"></script>
