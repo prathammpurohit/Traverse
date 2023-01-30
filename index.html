@@ -28,6 +28,9 @@
           font-size: 11px;
           overflow: hidden;
         }
+        .profile-card{
+          top: 0;
+        }
         i {
           font-size: 20px;
         }
@@ -36,15 +39,35 @@
           left: 101px;
           width: 70vw;
         }
+        .hidden-stats-bottom{
+          height: 14rem;
+        }
         #intro {
           font-size: 1rem;
         }
         @keyframes move-animation {
           0% {
-            top: -16px;
+            top: 0px;
           }
           100% {
-            top: -90px;
+            top: -6rem;
+          }
+        }
+        @keyframes move-animation-bottom {
+          0% {
+            top: 0;
+          }
+          100% {
+            top: 6rem;
+          }
+        }
+        @keyframes move-bottom-animation-back {
+          0% {
+            top: 6rem;
+          }
+          100% {
+            top: 0;
+            opacity: 0;
           }
         }
         @keyframes circle-animation {
@@ -82,10 +105,10 @@
         }
         @keyframes move-animation-back {
           0% {
-            top: -90px;
+            top: -6rem;
           }
           100% {
-            top: -16px;
+            top: -0px;
             opacity: 0;
           }
         }
@@ -105,16 +128,42 @@
           font-size: 14px;
         }
         .hidden-stats {
-          height: 80px;
+          height: 4rem;
           left: 68.5px;
           width: 70vw;
         }
         @keyframes move-animation {
           0% {
-            top: -10px;
+            top: 0px;
           }
           100% {
-            top: -66px;
+            top: -4rem;
+          }
+        }
+        @keyframes move-animation-back {
+          0% {
+            top: -4rem;
+          }
+          100% {
+            top: 0;
+          }
+        }
+
+        @keyframes move-animation-bottom {
+          0% {
+            top: 0;
+          }
+          100% {
+            top: 4rem;
+          }
+        }
+        @keyframes move-bottom-animation-back {
+          0% {
+            top: 4rem;
+          }
+          100% {
+            top: 0;
+            opacity: 0;
           }
         }
       }
@@ -122,35 +171,53 @@
   </head>
   <body>
     <main>
+      <!-- Profile card using flex -->
       <section class="profile-card animate__animated animate__jello">
+        <!-- hidden stats bar -->
         <div class="hidden-stats">
           <i
             class="fa-solid fa-eye-slash cross"
             style="color: #747888; font-size: 1rem"
             onclick="tapDefault()"
           ></i>
-          <!-- <i class="fa-solid fa-business-time"><strong>Portfolio</strong></i> -->
         </div>
+        <!--  -->
+        <!-- Profile picture -->
         <img src="images/crop.png" alt="" class="profile-picture" />
+        <!--  -->
+        <!-- Profile details -->
         <div class="profile">
+          <!-- Icons -->
           <div class="part1 animate__animated animate__jackInTheBox">
             <i class="i1 fa-solid fa-circle-info" onclick="tapInfo()"></i>
             <i class="i2 fa-solid fa-handshake-simple" onclick="tapShake()"></i>
             <i class="i3 fa-solid fa-paperclip" onclick="tapLink()"></i>
           </div>
+          <!--  -->
+          <!-- Typing data -->
           <div class="part2 animate__animated animate__bounce">
             <h1 class="username"><cite>Pratham Purohit</cite></h1>
             <code style="display: block" class="changing-profession"></code>
           </div>
+          <!--  -->
         </div>
+        <!--  -->
+        <!-- Hidden stats bottom -->
+        <div class="hidden-stats hidden-stats-bottom">
+          <iframe src="" frameborder="0" height="85%" width="95%" scrolling="no"></iframe>
+        </div>
+        <!--  -->
       </section>
+      <!--  -->
     </main>
+    <!-- Intro Animation -->
     <div id="intro">
       <h2 class="animate__animated animate__lightSpeedInRight">
         <span class="tra">Tra</span
         ><span class="v animate__animated animate__bounce">V</span
         ><span class="tra">erse</span>
       </h2>
+      <!--  -->
     </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
